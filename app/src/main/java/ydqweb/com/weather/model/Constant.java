@@ -5,6 +5,7 @@ package ydqweb.com.weather.model;
  */
 
 public class Constant {
-    static String CITY_KEY = "http://wthrcdn.etouch.cn/WeatherApi?citykey=";
-    static String CITY_NAME = "http://wthrcdn.etouch.cn/WeatherApi?city=";
+    public static String CITY_KEY = "http://wthrcdn.etouch.cn/WeatherApi?citykey=";
+    public static String CITY_NAME = "http://wthrcdn.etouch.cn/WeatherApi?city=";
+    public static int GET_CITY = 1;
 }

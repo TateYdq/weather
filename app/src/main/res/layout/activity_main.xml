@@ -26,8 +26,8 @@
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
-                    android:text="@string/beijing_weather"
                     android:textColor="#FFFFFF"
+                    android:id="@+id/weather_title_tv"
                     android:textSize="20dp" />
                 <ImageButton
                     android:id="@+id/get_location"
@@ -53,6 +53,7 @@
 
         </android.support.v7.widget.Toolbar>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -76,10 +77,10 @@
                     android:id="@+id/cur_place"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="40dp"
-                    android:textColor="#FFFFFF"
                     android:layout_marginLeft="20dp"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="40dp" />
 
                 <TextView
                     android:id="@+id/cur_humidity"
@@ -87,17 +88,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:textSize="20dp"
                     android:text=""
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:layout_marginTop="10dp">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -121,7 +122,7 @@
                             android:id="@+id/cur_pm"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="100"
+                            android:text="N/A"
                             android:textColor="#FFFFFF"
                             android:textSize="30dp" />
                     </LinearLayout>
@@ -131,23 +132,27 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/biz_plugin_weather_0_50" />
                 </LinearLayout>
+
                 <TextView
+                    android:id="@+id/cur_quality"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:text="N/A"
                     android:textColor="#FFFFFF"
-                    android:text="重度污染"
-                    android:id="@+id/cur_quality"/>
+                    android:textSize="20dp" />
             </LinearLayout>
-    </LinearLayout>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/biz_plugin_weather_qing"/>
+                android:src="@drawable/biz_plugin_weather_qing" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -157,7 +162,7 @@
                     android:id="@+id/cur_day"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="今天 星期三"
+                    android:text="N/A"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp" />
 
@@ -165,7 +170,7 @@
                     android:id="@+id/cur_temperature"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="-2°C ~ -7°C"
+                    android:text="N/A"
                     android:textColor="#FFFFFF"
                     android:textSize="25dp" />
 
@@ -173,7 +178,7 @@
                     android:id="@+id/cur_weather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="多云转晴"
+                    android:text="N/A"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp" />
 
@@ -181,10 +186,148 @@
                     android:id="@+id/cur_wind"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="微风"
+                    android:text="N/A"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp" />
             </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cur_date2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <ImageView
+                    android:id="@+id/cur_date2_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/cur_date2_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <TextView
+                    android:id="@+id/cur_date2_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <TextView
+                    android:id="@+id/cur_date2_wind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cur_date3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <ImageView
+                    android:id="@+id/cur_date3_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/cur_date3_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <TextView
+                    android:id="@+id/cur_date3_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <TextView
+                    android:id="@+id/cur_date3_wind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp"
+                    android:text="N/A" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cur_date4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <ImageView
+                    android:id="@+id/cur_date4_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/cur_date4_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:text="N/A" />
+
+                <TextView
+                    android:id="@+id/cur_date4_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp"
+                    android:text="N/A" />
+
+                <TextView
+                    android:id="@+id/cur_date4_wind"
+                    android:layout_width="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="N/A" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
