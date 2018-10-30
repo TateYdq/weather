@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private String cityName,cityCode;
     String url="";
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -182,12 +183,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 case R.id.refresh_weather:{
-                    Log.i(TAG,"city:"+cityName);
-                    if(cityName.equals("")){
-                        return;
-                    }
-                    new MyAsyncTask().execute(cityName);
-                    break;
+                    refreshWeather();
                 }
                 case R.id.get_location:{
                     Intent intent = new Intent(MainActivity.this,ChooseCityActivity.class);
@@ -195,6 +191,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+    private void refreshWeather(){
+        Log.i(TAG,"city:"+cityName);
+        if(cityName.equals("")){
+            return;
+        }
+        new MyAsyncTask().execute(cityName);
     }
 
 }

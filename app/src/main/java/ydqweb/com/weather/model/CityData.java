@@ -1,31 +1,66 @@
 package ydqweb.com.weather.model;
 
 /**
- * Created by yu_daoqing on 2018/10/23.
+ * Created by yu_daoqing on 2018/10/30.
  */
 
-public class CityData {
-    public CityData(String cityName, String cityCode) {
-        this.cityName = cityName;
-        this.cityCode = cityCode;
+public class City {
+    public City(String province, String city, String number, String firstPY, String allPY, String allFirstPY) {
+        this.province = province;
+        this.city = city;
+        this.number = number;
+        this.firstPY = firstPY;
+        this.allPY = allPY;
+        this.allFirstPY = allFirstPY;
     }
 
-    public String getCityName() {
-        return cityName;
+    public String getProvince() {
+        return province;
     }
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
+    public void setProvince(String province) {
+        this.province = province;
     }
 
-    public String getCityCode() {
-        return cityCode;
+    public String getCity() {
+        return city;
     }
 
-    public void setCityCode(String cityCode) {
-        this.cityCode = cityCode;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    private String cityName;
-    private String cityCode;
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getFirstPY() {
+        return firstPY;
+    }
+
+    public void setFirstPY(String firstPY) {
+        this.firstPY = firstPY;
+    }
+
+    public String getAllPY() {
+        return allPY;
+    }
+
+    public void setAllPY(String allPY) {
+        this.allPY = allPY;
+    }
+
+    public String getAllFirstPY() {
+        return allFirstPY;
+    }
+
+    public void setAllFirstPY(String allFirstPY) {
+        this.allFirstPY = allFirstPY;
+    }
+
+    private String province,city,number,firstPY,allPY,allFirstPY;
 }
